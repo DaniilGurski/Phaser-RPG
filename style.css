@@ -1,0 +1,19 @@
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0; 
+  overflow: hidden;
+}
+
+
+body,
+html,
+.container {
+  height: 100%; 
+}
+
+
+body {
+  background-color: #d7d7d7;
+}
