@@ -96,6 +96,12 @@ export class Character {
         this._direction = value
     }
 
+    
+    /** @type {import("../../common/direction").Direction} */
+    get direction() {
+        return this._direction
+    }
+
 
     _getIdleFrame() {
         return this._idleFrameConfig[this._direction];

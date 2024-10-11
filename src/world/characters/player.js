@@ -43,16 +43,15 @@ export class Player extends Character {
             case DIRECTIONS.UP:
                 // prevent animation from resetting
                 if (
-                    !this._phaserGameObj.anims.isPlaying ||
-                    this._phaserGameObj.anims.currentAnim?.key !== `PLAYER_${this.direction}`
+                    !this.gameObject.anims.isPlaying ||
+                    this.gameObject.anims.currentAnim?.key !== `PLAYER_${this.direction}`
                 ) {
-                    this._phaserGameObj.play(`PLAYER_${this._direction}`);
+                    this.gameObject.play(`PLAYER_${this.direction}`);
                 }
                 break;
             case DIRECTIONS.NONE: 
                 break;
-            default:
-                exhaustiveGuard(this._direction)
+
         }
     }
 }
